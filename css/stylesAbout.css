@@ -1,0 +1,215 @@
+/* Sheet - Inês F., Mariana G., 2023-24, 10/11 */
+
+/*H1*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/*H2*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/*Corpo de Texto*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*Paleta de cores*/
+:root{
+    --primeira-cor: #FDFED1;
+    --segunda-cor: #8B628A;
+    --terceira-cor:  #CBB8BB;
+    --quarta-cor: #2ea29d;
+    --quinta-cor:#e1794c;
+    --sexta-cor: #95c69e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    max-width: 425px;
+}
+
+header {
+    display: block;
+    position: fixed;
+    height: 5rem;
+    background-color: var(--primeira-cor);
+}
+
+.ciclone {
+    display: block;
+    position: relative;
+    margin-top: 25px;
+    width: 65%;
+}
+
+/* MENU ............................................................................ */
+.menu {
+    display: block;
+    position: fixed;
+    left: 74%;
+    top: 21px;
+    width: 35pt;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 101;
+}
+
+.menu .barras, .menu:after, .menu:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color:var(--segunda-cor);
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+/* o que fiz aqui em cima está a criar aqueles tres risquinhos, o "hamburguer". penso qque isto não será necessário uma vez que o botão é uma imagem*/
+
+.menu.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.menu.is-active .barras {
+   opacity: 0;
+}
+
+.menu.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.menumovel {
+    display:block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 98;
+    padding-top: 120px;
+    background-color: var(--primeira-cor);
+    transition: 0.4s;
+}
+
+.menumovel.is-active {
+    left: 0;
+}
+
+.menumovel a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    padding: 12px 16px;
+    background-color:var(--terceira-cor);
+    color: var(--segunda-cor);
+    text-decoration: none;
+
+}
+
+.menumovel a {
+    background-color:var(--terceira-cor);
+    border-radius: 5px;
+}
+
+body{
+    background-color: var(--primeira-cor);
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif, 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    text-align: center;
+}
+
+.foter{
+    color: var(--segunda-cor);
+    font-size: 70%;
+    margin-bottom: 0.5rem;
+}
+
+main img {
+    padding-top: 10rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+    align-items: center;
+}
+
+.about-text{
+    display: block;
+    position: relative;
+    padding: 15px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    min-width: 15rem;
+    max-width: 60rem;
+    z-index: -2;
+}
+
+/*animaçao para esconder o texto*/
+.about-text p{
+    font-size: 14px;
+    color: var(--segunda-cor);
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 70% cover 30%;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+    html{
+        max-width: 100%;
+    }
+
+    .menu {
+        left: 95%;
+        z-index: 99999;
+     }
+
+    header {
+        margin-top: 0;
+    }
+
+    .ciclone {
+        margin-top: 21px;
+        width: 25%;
+        left: 37%;
+    }
+
+    main {
+        padding-top: 8rem;
+    }
+
+    main img {
+        display: block;
+        position: relative;
+        padding-top: 1rem;
+        padding-bottom: 10rem;
+        width: 25%;
+        left: 37%;
+        z-index: -1;
+    }
+
+    .about-text {
+        line-height: 1.5;
+        margin-top: 2rem;
+        margin-left: 33%;
+        right: 15%;
+    }
+}
+

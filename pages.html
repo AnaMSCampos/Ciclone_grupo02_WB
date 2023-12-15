@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclone</title>
+
+    <!-- Abaixo encontra-se a tag que faz ponte entre este file com o externo de Css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+
+    <!-- JScript inserir conexão | o defer (serve para que o doc só execute quando e apenas quando o Jscript carregar) ---- é arriscado, porque pode causar uma má experiência ao espectador, uma vez pode demorar demasiado a carregar e estancar com fundo branco/preto-estoy desposta a experimentar -->
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+    <main>
+
+        <button class="menu"> 
+            <div class="barras">
+            </div>
+        </button>
+        
+        <nav class="menumovel">
+            <a href="index.html">Home</a>
+            <a href="pages.html">Bernardo</a>
+            <a href="about.html">About</a>
+      </nav>
+      
+        <!-- Topo - Botão -->
+        <a id="link-topo" href="#" title="Topo">&#9650;</a>
+        <h1>Bernardo</h1>
+
+        <!-- Esta técnica de acordião de Webflow em substituição do uso de classes usa-se o seu equivalente em html - details (contudo julgo ter menos vantagens face ao uso da compibinação das divs com )-->
+        <div class="accordion">
+
+
+            <!-- ABA 1 -->
+            <div class="accordion-item">
+                <!-- abaixo estará o header/a parte que mostra o título de cada parte -->
+                <div class="accordion-item-header"><h2>Page Under Construction</h2></div>
+                <!-- contém o conteúdo da Pagina do texto -->
+                <div class="accordion-item-body">
+                    <!-- a div abaixo é criada para evitar erros na hora de animar com javascript, e tb para podermos colocar padding (que talvez eu não use)-->
+                    <div class="accordion-item-body-content">
+
+                        <div class="card">
+                            <div class="cover" class="tab">
+                               <img src="assets/images/aba1_separadores.png">
+                            </div>
+                            <div class="details">
+                               <div>
+                                   <h3> Page Under Construction </h3>
+
+                                   <div>
+                                    <p>Decidi criar um blogue.</p>
+                                    <p>Um blogue que fosse, tipo, um diário, mas aberto para o mundo inteiro.</p>
+                                    <p>Sem aquela coisa pirosa do papel que cheira bem e da caneta especial.</p>
+                                    <p>O digital é o autêntico: what you get is what you see.</p>
+                                    <p>Na verdade, nunca tive um diário. Aquela ideia de estar a escrever só para mim nunca me agradou. Acho que não tem interesse nenhum.</p>
+                                    <p>Um blogue é completamente diferente. Um blogue existe para dar a ver a vida de uma pessoa. E para isso só é preciso wi-fi.</p>
+                                    <p>Vai chamar-se ciclone ponto blogspot ponto com.</p>
+                                    <p class="text">Bernardo</p>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                    
+                        <div class="animation"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ABA 2 -->
+            <div class="accordion-item" id="aba2">
+                <div class="accordion-item-header"><h2>CICLONE.BLOGSPOT.COM</h2></div>
+        
+                <div class="accordion-item-body">
+        
+                    <div class="accordion-item-body-content">
+
+                        <aside>
+                            <div class="person-body">
+                                <div class="person_card">
+                                    <div class="img_container">
+                                        <div class="circle"></div>
+                                        <img src="assets/images/Bernardo 1.png" alt="Ilustração do BErnardo, jovem rapaz com camisola verde" class="person_img">
+                                    </div>
+                                    <div class="person_info">
+                                        <h4>Bernardo</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+
+
+                        <div class="window">
+                            <div class="coluna"></div>
+                        </div>
+
+
+                        <section class="content">
+                                     <h3>Ciclone</h3>
+                                     <hr>
+
+                                    <p>Eu sou EU.</p>
+                                    <p>Mas é preciso explicar.</p>
+                                    <p>Sempre fui viciado em velocidade. Sempre quis devorar o tempo e comer o futuro. Sempre tive pressa.</p>
+                                    <p>Mas isso foi antes de ter estado em Pripyat (não sei se é assim que se escreve).</p>
+                                    <p>Pripyat é uma cidade inteira, em silêncio. Fica na Ucrânia, muito próxima de Chernobil. É uma cidade tipicamente soviética. Centenas de ruas de traçado geométrico, milhares de apartamentos idênticos em prédios idênticos, todos com um busto de Lenine no centro da sala de estar.</p>
+                                    <p>É dia 27 de abril de 1986, domingo, faz sol. Faltam apensas três dias para o parque de diversões de Pripyat seja inaugurado. Vai ser no Primeiro de Maio, Dia do Trabalhador, com pompa e circunstância.</p>
+                                    <p>Mas nesse domingo, ao abrir as janelas das suas casas, os habitantes de Pripyat conseguem ver claramente uma enorme coluna de fumo que sai do reator 4 da central nuclear de Chernobil. O reator está em chamas. Tudo se passa a poucos quilómetros de distância<span class="text">.</span></p>
+                        </section>
+
+                        <div class="macaneta"></div>
+
+
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ABA 3 -->
+            <div class="accordion-item" id="aba3">
+                <div class="accordion-item-header"><h2>FAQ</h2></div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content" id="faq-body">
+                        <section class="faq-container">
+                            
+                                <aside>
+                                    <div class="person-body">
+                                        <div class="person_card">
+                                            <div class="img_container">
+                                                <div class="circle"></div>
+                                                <img src="assets/images/Bernardo 1.png" alt="Ilustração do BErnardo, jovem rapaz com camisola verde" class="person_img">
+                                            </div>
+                                            <div class="person_info">
+                                                 <h4>Bernardo</h4>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </aside>
+                        
+                                <h3>Frequently asked Questions?</h3>
+
+                                <!-- 1ª Pergunta & Resposta (P&R) -->
+                                <!-- acc=accordion | Queriamos ter um que não usasse Javascript para demonstrar que há duas formas de fazer este efeito -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc1">
+                                    <label for="acc1">
+                                        <h4>01</h4>
+                                        <h5>A minha preferida:</h5>
+                                    </label>
+                                    
+                                    <div class="faq-content">
+                                        <p>Que história é essa de "exploração urbana"?</p>
+                                    </div>
+                                </div>
+
+
+                                <!-- 2ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc2">
+                                    <label for="acc2">
+                                        <h4>02</h4>
+                                        <h5>A resposta óbvia:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>É andar á procura de alguma coisa em lugares abandonados.</p>
+                                    </div>
+                                </div>
+
+                    
+
+
+
+                                <!-- 3ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc3">
+                                    <label for="acc3">
+                                        <h4>03</h4>
+                                        <h5>E a pergunta seguinte:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>Mas à procura de quê?</p>
+                                    </div>
+                                </div>
+
+                                
+
+
+
+                                <!-- 4ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc4">
+                                    <label for="acc4">
+                                        <h4>04</h4>
+                                        <h5>A resposta varia consoante o destinatário:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            <ul>
+                                            <li>Um sentido para a vida.</li>
+                                            <li>Emoção.</li>
+                                            <li>Adrenalina.</li>
+                                            <li>Sei lá!</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 5ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc5">
+                                    <label for="acc5">
+                                        <h4>05</h4>
+                                        <h5>Os insistentes prosseguem:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Mas porquê em lugares abandonados?
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 6ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc6">
+                                    <label for="acc6">
+                                        <h4>06</h4>
+                                        <h5>Lá desencanto uma resposta poética:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            São lugares cheios de segredos.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                
+
+
+
+                                <!-- 7ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc7">
+                                    <label for="acc7">
+                                        <h4>07</h4>
+                                        <h5>Então ouve-se a voz da razão:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Mas isso não é invasão de propriedade alheia?
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 8ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc8">
+                                    <label for="acc8">
+                                        <h4>08</h4>
+                                        <h5>Mas eu tenho resposta pronta!</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Há regras: "Não tires mais do que fotografias, não deixes mais do que pegadas.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                
+
+
+
+                                <!-- 9ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc9">
+                                    <label for="acc9">
+                                        <h4>09</h4>
+                                        <h5>Segue o desmancha-prazeres...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                          Já pensaste nas consequências?
+                                        </p>
+                                    </div>
+                                </div>
+
+                                
+
+
+
+                                <!-- 10ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc10">
+                                    <label for="acc10">
+                                        <h4>10</h4>
+                                        <h5>E outro...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Achas que isso tem futuro?
+                                        </p>
+                                    </div>
+                                </div>
+
+                                
+
+
+
+                                <!-- 11ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc11">
+                                    <label for="acc11">
+                                        <h4>11</h4>
+                                        <h5>E outro...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Mas porque é que não paras com isso?
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <!-- 12ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc12">
+                                    <label for="acc12">
+                                        <h4>12</h4>
+                                        <h5>E outro...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Mas qual é o interesse?                             
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 13ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc13">
+                                    <label for="acc13">
+                                        <h4>13</h4>
+                                        <h5>Eles não param, nem consigo responder...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Porque é que não fazes antes outra coisa com a tua vida?                          
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- 14ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc14">
+                                    <label for="acc14">
+                                        <h4>14</h4>
+                                        <h5>Eu já a desesperar...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Achas que é assim que o mundo funciona?                          
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- 15ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc15">
+                                    <label for="acc15">
+                                        <h4>15</h4>
+                                        <h5>E a machadada final:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Achas que sabes alguma coisa sobre a vida?                        
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- 16ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc16">
+                                    <label for="acc16">
+                                        <h4>16</h4>
+                                        <h5>Até que entra na discussão a mão, o pai, a tia, o avô, o professor, amiga...</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Onde é que estiveste ontem à noite?                        
+                                        </p>
+                                        <p>
+                                            Onde é que estiveste ontem à noite?                        
+                                        </p>
+                                        <p>
+                                            Onde é que estiveste ontem à noite?                        
+                                        </p>
+                                        <p>
+                                            Onde é que estiveste ontem à noite?                        
+                                        </p>
+                                        <p>
+                                            Onde é que estiveste ontem à noite?                        
+                                        </p>
+                                    </div>
+    
+                                </div>
+
+
+                                <!-- 17ª P&R -->
+                                <div class="tab">
+                                    <input type="radio" name="acc" id="acc17">
+                                    <label for="acc17">
+                                        <h4>17</h4>
+                                        <h5>Eu grito:</h5>
+                                    </label>
+
+                                    <div class="faq-content">
+                                        <p>
+                                            Fim de FAQ                        
+                                        </p>
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ABA 4 -->
+            <div class="accordion-item" id="aba4">
+                <div class="accordion-item-header"><h2>Uma Memória</h2></div>
+                <div class="accordion-item-body">
+                        <div class="accordion-item-body-content" >
+
+                            <aside class="person-body">
+                                <div class="person_card">
+                                    <div class="img_container">
+                                        <div class="circle"></div>
+                                        <img src="assets/images/Bernardo 1.png" alt="Ilustração do BErnardo, jovem rapaz com camisola verde" class="person_img">    
+                                    </div>
+                                    <div class="person_info">
+                                        <h4>Bernardo</h4>
+
+                                        <!-- depois vemos se colocamos -->
+                                        <!-- <span>Montanhas-Russas</span> -->
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <section>
+                                <h3>Uma Memória</h3>
+                                <hr>
+
+                                <div>
+                                    <p>De toda a minha infância, há uma memória que guardo. A minha eterna paixão, quase obsessiva, por montanhas-russas. Sempre o vício da velocidade, da vertigem. Sempre a pressa. O limite.</p>
+                                    <p>Sempre achei que, se fosse uma máquina, seria uma montanha-russa<span class="text">...</span></p>
+                                </div>
+                            </section>
+
+
+                            <div class="img-fundo">
+                                <figure>
+                                    <img src="assets/images/montanharussa.png" alt="Uma montanha-russa">
+                                </figure>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foter">
+                WD P01, LDC | FBAUP 2023-24
+        </div>
+      </footer>
+</body>
+</html>

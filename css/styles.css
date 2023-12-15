@@ -1,0 +1,796 @@
+/* Sheet - Ana C.,Inês A.,Inês F., Mariana G., 2023-24, 10/11 */
+
+/* H1: */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* H2 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Corpo de Texto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --primeira-cor: #FDFED1;
+    --segunda-cor: #8B628A;
+    --terceira-cor:  #CBB8BB;
+    --quarta-cor: #2ea29d;
+    --quinta-cor:#e1794c;
+    --sexta-cor: #95c69e;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    max-width: 425px;
+}
+
+header {
+    display: block;
+    position: fixed;
+    height: 5rem;
+    background-color: var(--terceira-cor);
+}
+body{
+    font-family: 'Montserrat', sans-serif, 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--terceira-cor);
+    color: var(--primeira-cor);
+    display: flex;
+}
+
+/* MENU ............................................................................ */
+.menu {
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 95%;
+    width: 35pt;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 9999;
+}
+
+.menu .barras, .menu:after, .menu:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--segunda-cor);
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.menu.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.menu.is-active .barras {
+   opacity: 0;
+}
+
+.menu.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.menumovel {
+    display:block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 999;
+    padding-top: 120px;
+    background-color: var(--primeira-cor);
+    transition: 0.4s ease-in-out;
+}
+
+.menumovel.is-active {
+    left: 0;
+}
+
+.menumovel a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    padding: 12px 16px;
+    background-color: var(--terceira-cor);
+    color: var(--segunda-cor);
+    text-decoration: none;
+}
+
+.menumovel a {
+    background-color: var(--terceira-cor);
+    border-radius: 5px;
+}
+
+.menumovel a:hover {
+    background-color: #8B628A;
+    color: var(--terceira-cor);
+}
+
+
+/* -efeito-acordião------------------------------------------------------------------------------ */
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+.accordion{
+    bottom: 0;
+    width: 100%;
+    max-width: 10000px;
+    z-index:20;
+}
+
+/* style de items */
+.accordion-item{
+    margin: 0;
+    background-color: var(--segunda-cor);
+    color: var(--primeira-cor);
+
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5);
+
+}
+
+/* style do header/da parte que aparece */
+.accordion-item-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    min-height: 3rem;
+    line-height: 1.25rem;
+    font-weight: lighter;
+
+    /* Quando for fazer hover aparece para clicar */
+    cursor: pointer;
+}
+
+/* símbolo que se coloca antes e vai ser animado aquando clicar */
+.accordion-item-header::after{
+    /* entety do "+" no código corresponde a \002B */
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-item-header.active::after{
+    transform: rotate(90deg);
+}
+
+
+.accordion-item-header.active::after:hover , .accordion-item-header::after:hover{
+background-color: var(--primeira-cor);
+}
+
+/* símbolo de online/seleção */
+.accordion-item-header::before{
+    content: "\02689";
+    color: var(--sexta-cor);
+    font-size: 2rem;
+    position: absolute;
+    left: 1rem;
+    transition: transform 0.3s ease-in-out;
+} 
+
+.accordion-item-header.active::before{
+    color: var(--quinta-cor) ;
+    transform: rotate(180deg);
+}
+
+
+/* body do accordion */
+
+.accordion-item-body{
+    max-height: 0;
+    height: 80%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+ 
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.1rem;
+    background-color:var(--primeira-cor);
+}
+
+/* .accordion-item-header.active + .acordion-item-body{
+    display: block;
+}
+
+
+/* Organização interior Geral -------------------------------------*/
+
+main{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+aside{
+    position: relative;
+    display: block;
+    max-width: 100px;
+    margin: 0 auto 0 auto;
+    
+}
+
+
+.foter{
+    position: absolute;
+    top: 95%;
+    right: 42%;
+    color: var(--segunda-cor);
+    font-size: 70%;
+    z-index: -10;
+}
+
+
+
+
+/* Aba 1 */
+
+/* face interior do texto */
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px; /* ajusta estes de acordo com o tamanho que queres*/
+    background-color: white;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transform: perspective(500px);
+    transition: 1s;
+    z-index: 95;
+    left: 24%;
+    z-index: 200 ;
+}
+
+.card:hover {
+    transform: perspective(1000px) translate(50%);
+    z-index: 90;
+}
+
+.card .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--terceira-cor);
+   z-index: 90;
+   display: flex;
+   justify-content:center;
+   align-items:center;
+   transform-style: preserve-3d;
+   overflow: hidden;
+   transition: 1s ease-in-out;
+   transform-origin: left;
+   border-radius: 10px;
+
+}
+
+.card .cover img {
+    width: 90%;
+    max-width: 100%;
+    z-index: 10;
+}
+
+.card:hover .cover {
+    transform: rotateY(-180deg);
+}
+
+.card .cover:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 200%;
+    background: var(--quinta-cor);
+    transform: rotate(30deg);
+    box-shadow: 0 0 0 10px var(--quinta-cor);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+.card:hover .cover:before {
+    width: 0;
+    box-shadow: 0 0 0 250px var(--quinta-cor);
+    transform: rotate(143.5deg);
+  
+}
+
+/* Corpo de Texto */
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    padding: 10px 20px 10px 0px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    z-index:10;
+
+    /* scroll */
+    overflow-y: scroll;
+
+}
+
+.card .details h3 {
+    margin: 20px 0;
+}
+
+
+/* Aba 2  e Aba 4.............................................................. */
+#aba2 .accordion-item-body-content, #aba4 .accordion-item-body-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#aba2 .person-body, #aba4 .person-body{
+    padding-bottom: 20px;
+}
+
+
+#aba2 section{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--terceira-cor);
+    width: 18rem;
+    min-width: 300px;
+    max-width: 300px;
+    max-height: 900px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.window{
+    content:'';
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border: 5px solid var(--terceira-cor);
+    border-bottom:2px ;
+
+    background-color: rgba(176, 227, 227, 80%);
+    background-image: url("../assets/images/casinha.png");
+    background-size: cover;
+
+}
+
+.window:hover{
+    transform: ease-in-out;
+    background-image: url("https://assets.website-files.com/62fa09b13c6824e3ca3b6876/63132dfbad9f795efc024bde_Blue%20Mist.gif");
+}
+
+.coluna{
+    content: '';
+    display: absolute;
+    width: 5px;
+    height: 200px;
+    background: #CBB8BB;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* aba 4 - específico */
+#aba4 .accordion-item-body-content{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#aba4 section{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--terceira-cor);
+    width: 18rem;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 200px;
+}
+
+/* imagem do fundo */
+.img-fundo div{
+    position: relative;
+    display: block;
+}
+
+.img-fundo img{
+    width: 100%;
+}
+
+
+
+/* Aba 3 ..........................................................*/
+/* faq */
+#faq-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primeira-cor);
+}
+
+#faq-body section{
+    height: 1500px;
+    min-height: 1000px;
+}
+
+.faq-container{
+    margin: 0 40px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} 
+
+.faq-container h3 {
+    color: var(--segunda-cor);
+    z-index: 58;
+}
+
+.faq-container .tab{
+    position: relative;
+    background-color: #95c69e;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px var(--quarta-cor);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-container .tab input{
+    appearance: none;
+}
+
+.faq-container .tab label{
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+
+.faq-container .tab label::after{
+    content: "\002B";
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: var(--quinta-cor);  
+    transition: transform 1s; 
+    z-index: 50; 
+}
+
+.faq-container .tab:hover label::after {
+    color:var(--quarta-cor);
+    box-shadow: #2ea29d;
+    z-index: 50;
+}
+
+.faq-container .tab input:checked ~ label::after{
+    transform: rotate(135deg);
+    color: #fff;
+}
+
+/* label (parte do título da aba) */
+.faq-container .tab label h4{
+    width: 30px;
+    height: 30px;
+    background: var(--quinta-cor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--sexta-corr);
+    font-size: 1em;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.faq-container .tab input:checked ~ label h4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 8em;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.faq-container .tab:nth-child(1) label h4{
+    background: linear-gradient(135deg);
+}
+
+.faq-container .tab label h5{
+    position: relative;
+    color: var(--primeira-cor);
+    z-index: 10;
+    width: 80%;
+
+}
+
+.faq-container .tab input:checked ~ label h5{
+    background: #fff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    color: var(--segunda-cor);
+}
+
+/* Abaixo é o que faz abrir e fechar as abas da FAQ */
+.faq-container .tab .faq-content{
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.faq-container .tab input:checked ~ .faq-content{
+    max-height: 100vh;
+}
+
+/* Corpo de Texto da Resposta */
+.faq-container .tab .faq-content p, .faq-container .tab .faq-content li {
+    position: relative;
+    padding: 10px 0;
+    color: var(--primeira-cor);
+    z-index: 10;
+}
+
+/* texto interior aquando a aba aberta */
+.faq-container .tab input:checked ~ .faq-content p, .faq-container .tab input:checked ~ .faq-content li{
+color: white;
+}
+
+.faq-container .tab .faq-content li{
+    margin: 0;
+    padding-top: 0;
+}
+
+/* Título */
+.faq-container h3{
+    text-align: center;
+    color: var(--primeira-cor);
+    font-size: 1.25rem;
+}
+
+
+
+
+/* Imagem - Popup (ABA: 2,3,4) ----------------------- */
+/* imagem - pop-up */
+.person-body{
+    display: flex;
+
+}
+
+.person_card{
+    position: flex;
+    justify-content: center;
+}
+
+.img_container {
+    position: relative;
+    margin: auto;
+    width: 70px;
+    aspect-ratio: 1 / 1 ;
+    /* background-color: #8B628A; */
+    display: flex;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: transform 250ms ease-in-out;
+}
+
+.img_container:hover{
+    transform: scale(1.1);
+}
+
+.img_container .circle{
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--segunda-cor);
+    border-radius: 50%;
+}
+
+.img_container .person_img{
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    transform: scale(1.1);
+    transition: transform 400ms ease-in-out;
+}
+
+.img_container:hover .person_img{
+    transform: scale(1.125) translateY(-5px);
+}
+
+/* texto abaixo */
+.person_info h4, .person_info span{
+    color: #8B628A !important;
+    text-align: center;
+}
+.person_info h4{
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    text-align: center;
+}
+.person_info span{
+    font-size: 7pt;
+    text-align: center;
+}
+
+
+
+
+/* Elementos Textuais ................................................................ */
+h1{
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2{
+    color:var(--primeira-cor);
+    font-weight:bolder;
+    font-style: italic;
+    font-size: 0.75rem;
+    background-color:var(--terceira-cor); 
+    border-radius: 20px;
+    padding-left: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+h3{
+    color: var(--segunda-cor);
+    font-size: small;
+}
+
+p,ul{
+    font-size: 11px;
+    color: var(--segunda-cor);
+}
+
+
+/* Elementos Decorativos .......................................................................... */
+hr{
+    border: transparent;
+    padding-bottom: 20px;
+}
+
+/* botão do topo */
+#link-topo {
+    color: var(--primeira-cor);
+    background-color: var(--quinta-cor);
+    padding:8px 10px 10px 10px;
+    position: fixed;
+    right:10px;
+    bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px #575a5a;
+    z-index: 91;
+}
+
+
+
+/* Efeito Typewrite */
+.text{
+    text-align: right;
+    margin: 10px 0 10px 0;
+    text-align: right;
+    font-size: 0.90em;
+    border-right: 2px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(8),
+               cursor .4s step-end infinite alternate;
+}
+
+/* Cursor a piscar */
+@keyframes cursor{
+    50% { border-color: transparent;}
+}
+
+/* computador */
+@media only screen and (min-width: 768px) {
+
+
+    html{
+        max-width: 100%;
+    }
+
+    body {
+        margin: 3em;
+        margin-top: 1em;
+    }
+
+    .card {
+        position: relative;
+        width: 50%;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        transform: perspective(500px);
+        transition: 1s;
+        z-index: 100;
+        left: 24%;
+        z-index: 200 ;
+    }
+    
+    .card .cover img {
+        width: 50%; 
+        max-width: 100%;
+        top: 20px;
+        z-index: 3;
+    }
+
+    #aba2 .accordion-item-body-content {
+        height: 900px;
+    }
+
+    #aba4 .accordion-item-body-content {
+        height: 900px;
+    }
+    #aba2 section, #aba4 section{
+        position: relative;
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        background-color: var(--terceira-cor);
+        
+    }
+
+    #aba2 section {
+        height: 530px;
+    }
+
+    #aba4 section {
+      height: 550px;
+    }
+
+    .img-fundo img{
+        margin-left: 35%;
+       
+        width: 30%;
+        align-items: center;
+    }
+
+    .foter{
+        position: absolute;
+        top: 96%;
+        right: 44%;
+        color: var(--segunda-cor);
+        font-size: 87%;
+        z-index: -4;
+    }
+    
+}
